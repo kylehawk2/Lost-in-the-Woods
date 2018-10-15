@@ -1,0 +1,20 @@
+﻿<link rel="stylesheet" href="~/css/styles.css" />
+@foreach(var info in ViewBag.showTrailInfo){
+    <h1>@info.trail_name Trail Information</h1>
+    <table>
+        <tr>
+            <th>Trail Name</th>
+            <th> Length</th>
+            <th> Elevation</th>
+            <th> longitude and latitude</th>
+        </tr>
+        <tr>
+            <td>@info.trail_name</td>
+            <td>@info.length Miles</td>
+            <td>@info.elevation feet</td>
+            <td>@info.longitude , @info.latitude</td>
+        </tr>
+    </table>
+    <p>Description</p>
+    <p>@info.description</p>
+}

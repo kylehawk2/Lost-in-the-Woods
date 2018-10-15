@@ -1,0 +1,40 @@
+﻿@model LostintheWoods.Models.AllTrails
+
+@{
+    ViewData["Title"] = "Lost in the Woods";
+}
+<link rel="stylesheet" href="~/css/styles.css" />
+<h2 id="addtrail_title" >Add A New Trail</h2>
+<span asp-validation-for="trail_name"></span>
+<span asp-validation-for="description"></span>
+<span asp-validation-for="length"></span>
+<span asp-validation-for="elevation"></span>
+<form asp-controller="Home" asp-action="AddTrailtoDb" method="post">
+    <table class="list">
+        <tr>
+            <td><label asp-for="trail_name">Trail Name:</label></td>
+            <td><input asp-for="trail_name"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="description">Description:</label></td>
+            <td><input asp-for="description"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="length">Trail Length:</label></td>
+            <td><input asp-for="length"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="elevation">Elevation Change:</label></td>
+            <td><input asp-for="elevation"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="elevation">Longitude</label></td>
+            <td><input asp-for="longitude">
+        </tr>
+        <tr>
+            <td><label asp-for="elevation">Latitude</label></td>
+            <td><input asp-for="latitude"></td>
+        </tr>
+    </table>
+       <button type="submit">Add Trail</button>
+</form>
